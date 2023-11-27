@@ -2,12 +2,15 @@ import hashlib
 import json
 
 from time import time
+from urllib.parse import urlparse
 
 class Blockchain(object):
 
     def __init__(self):
         self.chain = []
         self.current_transactions = []
+
+        self.nodes = set()
 
         # Create the genesis block
         self.new_block(previous_hash=1, proof=100)
@@ -62,12 +65,26 @@ class Blockchain(object):
 
         return proof
     
+    def register_node(self, address):
+        """
+            dd a new node to the list of nodes
+            :param address: <str> Address of node. Eg. 'http://192.168.0.5:5050'
+            :return: NoneA
+        """
+        
+        parsed_url = urlparse(address)
+        self.nodes.add(parsed_url.netloc)
+
+
+    
     @staticmethod
     def hash(block):
+        
         # We must make sure that the Dictionary is Ordered, or we'll have inconsistent hashes
         block_string = json.dumps(block, sort_keys=True).encode()
         
         return hashlib.sha256(block_string).hexdigest()
+    
     @staticmethod
     def valid_proof(last_proof, proof):
         guess = f'{last_proof}{proof}'.encode()
