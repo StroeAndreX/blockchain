@@ -1,0 +1,56 @@
+{
+    "chain": [
+        {
+            "index": 1,
+            "previous_hash": 1,
+            "proof": 100,
+            "timestamp": 1701053124.957987,
+            "transactions": []
+        },
+        {
+            "index": 2,
+            "previous_hash": "b698ef699ccbc35487eb15b14b191b4983dfe1d53c62172c60c0aafb1c8573c2",
+            "proof": 35293,
+            "timestamp": 1701053127.6982,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "805d98d12e15422b97c0ede794a3c51a",
+                    "sender": "0"
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "previous_hash": "d2f98614eda3086edf7d96cd977b052416aa02a7fa972ea89ca2565ed5577f13",
+            "proof": 35089,
+            "timestamp": 1701053148.7161028,
+            "transactions": [
+                {
+                    "amount": 5,
+                    "recipient": "someone-other-address",
+                    "sender": "d4ee26eee15148ee92c6cd394edd974e"
+                },
+                {
+                    "amount": 1,
+                    "recipient": "805d98d12e15422b97c0ede794a3c51a",
+                    "sender": "0"
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "previous_hash": "de8cdd9b3bb50dd74326f36232537a254d90fe6335dc8717e52be9cf417c1479",
+            "proof": 119678,
+            "timestamp": 1701053163.614578,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "805d98d12e15422b97c0ede794a3c51a",
+                    "sender": "0"
+                }
+            ]
+        }
+    ],
+    "length": 4
+}
