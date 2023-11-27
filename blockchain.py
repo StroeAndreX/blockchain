@@ -2,7 +2,6 @@ import hashlib
 import json
 
 from time import time
-from uuid import uuid4
 
 class Blockchain(object):
     def __init__(self) -> None:
@@ -76,3 +75,11 @@ class Blockchain(object):
         guess_hash = hashlib.sha256(guess).hexdigest()
         
         return guess_hash[:4] == "0000"
+    
+
+
+
+
+
+
+
